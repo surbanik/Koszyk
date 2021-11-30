@@ -13,13 +13,13 @@ public class DisplayInfo {
         }
     }
 
-    public static void displayTotalCostso(List<Product> shippingList){
-        BigDecimal totalCost= new BigDecimal(0);
+    public static void displayTotalCostso(List<Product> shippingList) {
+        BigDecimal totalCost = new BigDecimal(0);
         for (Product product : shippingList) {
-            BigDecimal productCost=product.price.multiply(new BigDecimal(product.quantity));
+            BigDecimal productCost = product.price.multiply(new BigDecimal(product.quantity));
             totalCost = totalCost.add(productCost);
         }
-        System.out.println("Łączny koszt całego zamówienia "+totalCost);
+        System.out.println("Łączny koszt całego zamówienia " + totalCost);
     }
 
 }
